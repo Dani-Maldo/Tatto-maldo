@@ -20,15 +20,15 @@ body {
 ========================*/
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #2C2C2C;
     padding: 20px;
 }
 
 header h1 {
-
     text-align: center;
-    font-size: 40px;
-    font-weight: 700;
 }
 
 /*=============================
@@ -39,9 +39,7 @@ nav ul {
 
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 30px;
-    margin-top: 15px;
 }
 
 nav a {
@@ -55,6 +53,30 @@ nav a {
 nav a:hover {
 
     color: #C9A227;
+}
+
+/*=============================
+    PRESENTACION
+===============================*/
+
+.presentacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.presentacion img {
+    display: block;
+}
+
+.presentacion figure {
+    flex: 1;
+}
+
+.presentacion article {
+    flex: 1;
 }
 
 /*=============================
@@ -85,6 +107,7 @@ p {
 }
 
 h1 {
+    font-weight: 700;
     font-size: 40px;
 }
 

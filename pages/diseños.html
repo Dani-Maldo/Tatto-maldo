@@ -1,102 +1,579 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Tatto-Maldo | Diseños</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS propio -->
+<link rel="stylesheet" href="../styles/styles.css">
+
+<title>Tatto-Maldo | Diseños</title>
+
 </head>
 
 <body>
 
-    <header>
-        <h1>Tatto-Maldo</h1>
+<!-- NAVBAR BOOTSTRAP -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tatto">
+        <div class="container">
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="culturas.html">Culturas</a></li>
-                <li><a href="#">Diseños</a></li>
-                <li><a href="variedades.html">Variedades</a></li>
-            </ul>
-        </nav>
-    </header>
+            <a class="navbar-brand" href="../index.html">
+                Tatto-Maldo
+            </a>
 
-    <main>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTatto" aria-controls="navbarTatto" aria-expanded="false"
+                aria-label="Abrir menú">
 
-        <section class="introduccion-disenos">
-            <figure>
-                <img src="../img/Diseños/Rosario.jpg" alt="Diseño de tatuaje de un rosario">
-                <figcaption>Diseños personalizados adaptados al estilo de cada cliente.</figcaption>
-            </figure>
+                <span class="navbar-toggler-icon"></span>
 
-            <div class="texto-disenos">
-                <h2>Diseños</h2>
-                <p>
-                    En Tatto-Maldo buscamos que cada tatuaje sea único. Explorá algunos
-                    de nuestros diseños y encontrá inspiración para tu próximo tatuaje.
-                </p>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarTatto">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="culturas.html">
+                            Culturas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            Diseños
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="variedades.html">
+                            Variedades
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
-        </section>
 
-        <section>
-            <h2>Galería de diseños</h2>
+        </div>
+    </nav>
+</header>
 
-            <div class="galeria-disenos">
-                <article class="diseno">
-                    <img src="../img/Diseños/RosaConSerpiente.jpg" alt="Diseño de rosa con serpiente">
-                    <h3>Rosa con serpiente</h3>
-                </article>
 
-                <article class="diseno">
-                    <img src="../img/Diseños/zorrito.jpg" alt="Diseño de un zorro">
-                    <h3>Zorro</h3>
-                </article>
+<main>
 
-                <article class="diseno">
-                    <img src="../img/Diseños/Calavera.jpg" alt="Diseño de una calavera">
-                    <h3>Calavera</h3>
-                </article>
+    <!-- INTRODUCCIÓN -->
+    <section class="introduccion-disenos">
 
-                <article class="diseno">
-                    <img src="../img/Diseños/CascoEspartano.jpg" alt="Diseño de casco espartano">
-                    <h3>Casco espartano</h3>
-                </article>
+        <figure>
+            <img src="../img/Diseños/Rosario.jpg"
+                alt="Diseño de tatuaje de un rosario">
 
-                <article class="diseno">
-                    <img src="../img/Diseños/AngelArrodiyado.jpg" alt="Diseño de ángel arrodillado">
-                    <h3>Ángel arrodillado</h3>
-                </article>
+            <figcaption>
+                Diseños personalizados adaptados al estilo de cada cliente.
+            </figcaption>
+        </figure>
 
-                <article class="diseno">
-                    <img src="../img/Diseños/manga.jpg" alt="Diseño de manga de tatuaje">
-                    <h3>Manga</h3>
-                </article>
-            </div>
-        </section>
+        <div class="texto-disenos">
 
-    </main>
+            <h2>Diseños</h2>
 
-    <footer>
-        <div>
-            <h3>Redes Sociales</h3>
-            <ul>
-                <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://x.com/" target="_blank">X</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-            </ul>
+            <p>
+                En Tatto-Maldo buscamos que cada tatuaje sea único.
+                Explorá algunos de nuestros diseños y encontrá inspiración
+                para tu próximo tatuaje.
+            </p>
+
         </div>
 
-        <div>
-            <p>2026 Daniel Maldonado. Todos los derechos reservados.</p>
+    </section>
+
+
+    <!-- GALERÍA CON CARDS DE BOOTSTRAP -->
+    <section class="galeria-bootstrap">
+
+        <div class="container">
+
+            <h2 class="text-center mb-4">
+                Galería de diseños
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- ROSA CON SERPIENTE -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/RosaConSerpiente.jpg"
+                            class="card-img-top"
+                            alt="Diseño de rosa con serpiente">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Rosa con serpiente
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalRosa">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ZORRO -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/zorrito.jpg"
+                            class="card-img-top"
+                            alt="Diseño de un zorro">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Zorro
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalZorro">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CALAVERA -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/Calavera.jpg"
+                            class="card-img-top"
+                            alt="Diseño de una calavera">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Calavera
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCalavera">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CASCO ESPARTANO -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/CascoEspartano.jpg"
+                            class="card-img-top"
+                            alt="Diseño de casco espartano">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Casco espartano
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalEspartano">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÁNGEL -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/AngelArrodiyado.jpg"
+                            class="card-img-top"
+                            alt="Diseño de ángel arrodillado">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Ángel arrodillado
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalAngel">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MANGA -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card card-tatto h-100">
+
+                        <img src="../img/Diseños/manga.jpg"
+                            class="card-img-top"
+                            alt="Diseño de manga de tatuaje">
+
+                        <div class="card-body text-center">
+
+                            <h3 class="card-title">
+                                Manga
+                            </h3>
+
+                            <button type="button"
+                                class="btn btn-tatto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalManga">
+
+                                Ver diseño
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </footer>
+
+    </section>
+
+
+    <!-- MODAL ROSA -->
+    <div class="modal fade" id="modalRosa" tabindex="-1"
+        aria-labelledby="modalRosaLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalRosaLabel">
+                        Rosa con serpiente
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/RosaConSerpiente.jpg"
+                        class="img-fluid"
+                        alt="Diseño de rosa con serpiente">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL ZORRO -->
+    <div class="modal fade" id="modalZorro" tabindex="-1"
+        aria-labelledby="modalZorroLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalZorroLabel">
+                        Zorro
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/zorrito.jpg"
+                        class="img-fluid"
+                        alt="Diseño de un zorro">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL CALAVERA -->
+    <div class="modal fade" id="modalCalavera" tabindex="-1"
+        aria-labelledby="modalCalaveraLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalCalaveraLabel">
+                        Calavera
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/Calavera.jpg"
+                        class="img-fluid"
+                        alt="Diseño de una calavera">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL ESPARTANO -->
+    <div class="modal fade" id="modalEspartano" tabindex="-1"
+        aria-labelledby="modalEspartanoLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalEspartanoLabel">
+                        Casco espartano
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/CascoEspartano.jpg"
+                        class="img-fluid"
+                        alt="Diseño de casco espartano">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL ÁNGEL -->
+    <div class="modal fade" id="modalAngel" tabindex="-1"
+        aria-labelledby="modalAngelLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalAngelLabel">
+                        Ángel arrodillado
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/AngelArrodiyado.jpg"
+                        class="img-fluid"
+                        alt="Diseño de ángel arrodillado">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL MANGA -->
+    <div class="modal fade" id="modalManga" tabindex="-1"
+        aria-labelledby="modalMangaLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-tatto">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5" id="modalMangaLabel">
+                        Manga
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="../img/Diseños/manga.jpg"
+                        class="img-fluid"
+                        alt="Diseño de manga de tatuaje">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+
+        <h3>Redes Sociales</h3>
+
+        <ul>
+
+            <li>
+                <a href="http://www.facebook.com" target="_blank">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://x.com/" target="_blank">
+                    X
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    Instagram
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div>
+
+        <p>
+            2026 Daniel Maldonado. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

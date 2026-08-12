@@ -1,42 +1,92 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="styles/styles.css">
+
     <title>Tatto-Maldo</title>
+
 </head>
 
 <body>
 
-    <header class="header">
-        <h1>Tatto-Maldo</h1>
+    <!-- NAVBAR BOOTSTRAP -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-tatto">
+            <div class="container">
 
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-                <li><a href="pages/culturas.html">Culturas</a></li>
-                <li><a href="pages/diseños.html">Diseños</a></li>
-                <li><a href="pages/variedades.html">Variedades</a></li>
-            </ul>
+                <a class="navbar-brand" href="#">
+                    Tatto-Maldo
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTatto"
+                    aria-controls="navbarTatto" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarTatto">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/culturas.html">Culturas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/diseños.html">Diseños</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/variedades.html">Variedades</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
 
+
     <main>
 
+        <!-- PRESENTACIÓN -->
         <section class="presentacion">
+
             <figure>
                 <img src="img/tatuajes/bienvenidos-a-tatto-shop.jpg" alt="Interior del estudio Tatto-Maldo">
-                <figcaption>Bienvenidos a nuestro estudio.</figcaption>
+
+                <figcaption>
+                    Bienvenidos a nuestro estudio.
+                </figcaption>
             </figure>
+
             <article>
                 <h2>Bienvenido a Tatto-Maldo</h2>
+
                 <p>
                     En Tatto-Maldo convertimos tus ideas en arte sobre la piel.
                     Trabajamos con diseños personalizados y materiales de alta calidad.
@@ -45,51 +95,159 @@
 
         </section>
 
+
+        <!-- CAROUSEL BOOTSTRAP -->
+        <section class="galeria">
+
+            <h2>Galería de tatuajes</h2>
+
+            <div id="carouselTatto" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#carouselTatto" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Imagen 1"></button>
+
+                    <button type="button" data-bs-target="#carouselTatto" data-bs-slide-to="1"
+                        aria-label="Imagen 2"></button>
+
+                    <button type="button" data-bs-target="#carouselTatto" data-bs-slide-to="2"
+                        aria-label="Imagen 3"></button>
+
+                </div>
+
+
+                <!-- Imágenes -->
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="img/tatuajes/carousel1.jpg" class="d-block w-100" alt="Diseño de tatuaje 1">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/tatuajes/carousel2.jpg" class="d-block w-100" alt="Diseño de tatuaje 2">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/tatuajes/carousel3.webp" class="d-block w-100" alt="Diseño de tatuaje 3">
+                    </div>
+
+                </div>
+
+
+                <!-- Botón anterior -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTatto"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                    <span class="visually-hidden">
+                        Anterior
+                    </span>
+
+                </button>
+
+
+                <!-- Botón siguiente -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTatto"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                    <span class="visually-hidden">
+                        Siguiente
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIÉNES SOMOS -->
         <section>
+
             <h2>¿Quiénes somos?</h2>
 
             <p>
                 Somos un estudio dedicado al arte del tatuaje, comprometidos con la
                 creatividad, la higiene y la satisfacción de cada cliente.
             </p>
+
         </section>
 
+
+        <!-- ESTILOS -->
         <section>
+
             <h2>Estilos de tatuajes</h2>
 
             <article>
                 <h3>Blackwork</h3>
-                <p>Diseños realizados con tinta negra y líneas marcadas.</p>
+                <p>
+                    Diseños realizados con tinta negra y líneas marcadas.
+                </p>
             </article>
 
             <article>
                 <h3>Realismo</h3>
-                <p>Tatuajes con gran nivel de detalle y sombreado.</p>
+                <p>
+                    Tatuajes con gran nivel de detalle y sombreado.
+                </p>
             </article>
 
             <article>
                 <h3>Minimalista</h3>
-                <p>Diseños simples, elegantes y modernos.</p>
+                <p>
+                    Diseños simples, elegantes y modernos.
+                </p>
             </article>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div>
             <h3>Redes Sociales</h3>
+
             <ul>
-                <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://x.com/" target="_blank">X</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                <li>
+                    <a href="http://www.facebook.com" target="_blank">
+                        Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://x.com/" target="_blank">
+                        X
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        Instagram
+                    </a>
+                </li>
             </ul>
         </div>
 
         <div>
-            <p> 2026 Daniel Maldonado. Todos los derechos reservados.</p>
+            <p>
+                2026 Daniel Maldonado. Todos los derechos reservados.
+            </p>
         </div>
 
     </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

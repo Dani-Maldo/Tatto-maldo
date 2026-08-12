@@ -1,74 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Tatto-Maldo</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS propio -->
+<link rel="stylesheet" href="../styles/styles.css">
+
+<title>Tatto-Maldo | Variedades</title>
+
 </head>
 
 <body>
 
-    <header>
-        <h1>Tatto-Maldo</h1>
+<!-- NAVBAR BOOTSTRAP -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-tatto">
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="culturas.html">Culturas</a></li>
-                <li><a href="diseños.html">Diseños</a></li>
-                <li><a href="#">Variedades</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="container">
 
-    <main>
+            <a class="navbar-brand" href="../index.html">
+                Tatto-Maldo
+            </a>
 
-        <section>
-            <h2>variedades</h2>
-            <figure>
-                <img src="../img/abstractos/oso-tomando-vino.jpg" alt="Tatuaje abstracto de oso tomando vino">
-            </figure>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTatto"
+                aria-controls="navbarTatto"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarTatto">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="culturas.html">
+                            Culturas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="diseños.html">
+                            Diseños
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            Variedades
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- VARIEDAD ABSTRACTA -->
+    <section>
+
+        <h2>Variedades</h2>
+
+        <figure>
+
+            <img src="../img/abstractos/oso-tomando-vino.jpg"
+                alt="Tatuaje abstracto de oso tomando vino">
+
             <figcaption>
                 Estilo de tatuaje abstracto.
             </figcaption>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quia, cumque at praesentium ex officiis
-                nesciunt rerum mollitia similique esse iste pariatur aliquid consectetur, quasi eveniet repudiandae
-                velit modi delectus.
-            </p>
-        </section>
-        <section>
-            <figure>
-                <img src="../img/hipsters/leon-con-gorro.png" alt="Tatuaje hipsters de leon">
-            </figure>
+
+        </figure>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Error quia, cumque at praesentium ex officiis nesciunt rerum
+            mollitia similique esse iste pariatur aliquid consectetur,
+            quasi eveniet repudiandae velit modi delectus.
+        </p>
+
+    </section>
+
+
+    <!-- VARIEDAD HIPSTER -->
+    <section>
+
+        <figure>
+
+            <img src="../img/hipsters/leon-con-gorro.png"
+                alt="Tatuaje hipster de león">
+
             <figcaption>
-                Estilo de tatuaje hipsters
+                Estilo de tatuaje hipster.
             </figcaption>
-        </section>
-    </main>
 
-    <footer>
-        <div>
-            <h3>Redes Sociales</h3>
-            <ul>
-                <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://x.com/" target="_blank">X</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-            </ul>
-        </div>
+        </figure>
 
-        <div>
-            <p> 2026 Daniel Maldonado. Todos los derechos reservados.</p>
-        </div>
+    </section>
 
-    </footer>
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+
+        <h3>Redes Sociales</h3>
+
+        <ul>
+
+            <li>
+                <a href="http://www.facebook.com" target="_blank">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://x.com/" target="_blank">
+                    X
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    Instagram
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div>
+
+        <p>
+            2026 Daniel Maldonado. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

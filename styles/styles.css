@@ -15,43 +15,81 @@ body {
 }
 
 /*======================
-    HEADER
+    HEADER / NAVBAR
 ========================*/
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
     background: #2C2C2C;
-    padding: 20px;
 }
 
-header h1 {
-    text-align: center;
+.navbar-tatto {
+    background-color: #2C2C2C;
+    padding: 15px 20px;
 }
 
-/*=============================
-    NAVEGACIÓN
-=============================*/
-
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-nav a {
+.navbar-tatto .navbar-brand {
     color: #F5F5F5;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav a:hover {
+.navbar-tatto .navbar-brand:hover,
+.navbar-tatto .navbar-brand:focus {
     color: #C9A227;
+    transform: scale(1.03);
+}
+
+.navbar-tatto .navbar-brand:active {
+    color: #A88418;
+    transform: scale(0.98);
+}
+
+.navbar-tatto .nav-link {
+    color: #F5F5F5;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.navbar-tatto .nav-link:hover {
+    color: #C9A227;
+    background-color: #222;
+}
+
+.navbar-tatto .nav-link:focus {
+    color: #C9A227;
+    background-color: #222;
+    outline: 2px solid #C9A227;
+    outline-offset: 2px;
+}
+
+.navbar-tatto .nav-link:active {
+    color: #F5F5F5;
+    background-color: #C9A227;
+    transform: scale(0.96);
+}
+
+.navbar-tatto .nav-link.active {
+    color: #C9A227;
+}
+
+/* Botón hamburguesa de Bootstrap */
+.navbar-tatto .navbar-toggler {
+    border-color: #C9A227;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-tatto .navbar-toggler:hover {
+    background-color: #444;
+}
+
+.navbar-tatto .navbar-toggler:focus {
+    box-shadow: 0 0 0 2px #C9A227;
+}
+
+.navbar-tatto .navbar-toggler:active {
+    transform: scale(0.94);
 }
 
 /*=============================
@@ -178,7 +216,7 @@ img {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 img:hover {
@@ -215,10 +253,173 @@ footer ul {
 footer a {
     color: #F5F5F5;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 footer a:hover {
     color: #C9A227;
+}
+
+footer a:focus {
+    color: #C9A227;
+    outline: 2px solid #C9A227;
+    outline-offset: 3px;
+}
+
+footer a:active {
+    color: #A88418;
+    transform: scale(0.95);
+}
+
+/*======================
+    CARDS DE DISEÑOS
+========================*/
+
+.card-tatto {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    border: 1px solid #444;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-tatto:hover {
+    transform: translateY(-6px);
+    border-color: #C9A227;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-tatto:focus-within {
+    border-color: #C9A227;
+    box-shadow: 0 0 0 2px #C9A227;
+}
+
+.card-tatto:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+.card-tatto .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-tatto:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+.card-tatto .card-title {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+}
+
+/*======================
+    BOTONES BOOTSTRAP
+========================*/
+
+.btn-tatto {
+    background-color: #F5F5F5;
+    color: #1A1A1A;
+    border: 1px solid #F5F5F5;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.btn-tatto:hover {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    border-color: #F5F5F5;
+}
+
+.btn-tatto:focus {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    border-color: #C9A227;
+    box-shadow: 0 0 0 0.2rem rgba(201, 162, 39, 0.35);
+}
+
+.btn-tatto:active {
+    background-color: #C9A227 !important;
+    color: #1A1A1A !important;
+    border-color: #C9A227 !important;
+    transform: scale(0.96);
+}
+
+/*======================
+    CAROUSEL BOOTSTRAP
+========================*/
+
+#carouselTatto {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+#carouselTatto .carousel-item img {
+    width: 100%;
+    max-width: none;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#carouselTatto .carousel-control-prev,
+#carouselTatto .carousel-control-next {
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#carouselTatto .carousel-control-prev:hover,
+#carouselTatto .carousel-control-next:hover {
+    background-color: rgba(201, 162, 39, 0.2);
+}
+
+#carouselTatto .carousel-control-prev:focus,
+#carouselTatto .carousel-control-next:focus {
+    outline: 2px solid #C9A227;
+    outline-offset: -2px;
+}
+
+#carouselTatto .carousel-control-prev:active,
+#carouselTatto .carousel-control-next:active {
+    background-color: rgba(201, 162, 39, 0.35);
+}
+
+#carouselTatto .carousel-indicators button {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#carouselTatto .carousel-indicators button:hover {
+    transform: scale(1.15);
+}
+
+#carouselTatto .carousel-indicators button:focus {
+    outline: 2px solid #C9A227;
+    outline-offset: 2px;
+}
+
+#carouselTatto .carousel-indicators button:active {
+    transform: scale(0.9);
+}
+
+/*======================
+    MODALES
+========================*/
+
+.modal-tatto {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    border: 1px solid #444;
+}
+
+.modal-tatto .modal-body {
+    text-align: center;
+}
+
+.modal-tatto .modal-body img {
+    max-height: 70vh;
+    object-fit: contain;
 }
 
 /*=============================
@@ -227,13 +428,12 @@ footer a:hover {
 
 @media (min-width: 768px) {
 
-    main {
-        padding: 40px;
+    .navbar-tatto {
+        padding: 15px 30px;
     }
 
-    nav ul {
-        flex-direction: row;
-        gap: 20px;
+    main {
+        padding: 40px;
     }
 
     .galeria-disenos {
@@ -245,6 +445,10 @@ footer a:hover {
         justify-content: space-around;
         align-items: center;
     }
+
+    #carouselTatto .carousel-item img {
+        height: 480px;
+    }
 }
 
 /*=============================
@@ -253,19 +457,8 @@ footer a:hover {
 
 @media (min-width: 1024px) {
 
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 30px;
+    .navbar-tatto {
         padding: 20px 50px;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-
-    nav ul {
-        gap: 30px;
     }
 
     main {
@@ -306,62 +499,8 @@ footer a:hover {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
-}
-/*======================
-    CARDS DE DISEÑOS
-========================*/
 
-.card-tatto {
-    background-color: #1A1A1A;
-    color: #F5F5F5;
-    border: 1px solid #444;
-    overflow: hidden;
-}
-
-.card-tatto .card-img-top {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.card-tatto .card-title {
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 20px;
-}
-
-
-/*======================
-    BOTONES BOOTSTRAP
-========================*/
-
-.btn-tatto {
-    background-color: #F5F5F5;
-    color: #1A1A1A;
-    border: 1px solid #F5F5F5;
-}
-
-.btn-tatto:hover {
-    background-color: #1A1A1A;
-    color: #F5F5F5;
-    border-color: #F5F5F5;
-}
-
-
-/*======================
-    MODALES
-========================*/
-
-.modal-tatto {
-    background-color: #1A1A1A;
-    color: #F5F5F5;
-    border: 1px solid #444;
-}
-
-.modal-tatto .modal-body {
-    text-align: center;
-}
-
-.modal-tatto .modal-body img {
-    max-height: 70vh;
-    object-fit: contain;
+    #carouselTatto .carousel-item img {
+        height: 520px;
+    }
 }

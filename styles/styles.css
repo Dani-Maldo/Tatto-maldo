@@ -229,6 +229,31 @@ figcaption {
     line-height: 1.5;
 }
 
+
+/*=============================
+    CONTACTO - RESPONSIVE
+=============================*/
+
+.contacto-grid {
+    width: 100%;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-info .btn-tatto {
+    align-self: flex-start;
+}
+
+@media (max-width: 767px) {
+    .contacto-info .btn-tatto {
+        width: 100%;
+    }
+}
+
 /*=============================
     FOOTER
 =============================*/

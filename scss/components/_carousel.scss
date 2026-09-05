@@ -1,0 +1,51 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+#carouselTatto {
+  overflow: hidden;
+  border-radius: $radio-lg;
+  border: 1px solid $color-borde;
+
+  .carousel-item img {
+    width: 100%;
+    max-width: none;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    @include transicion(background-color, $transicion);
+    @include transicion(opacity, $transicion);
+
+    &:hover {
+      background-color: $color-overlay;
+    }
+
+    &:focus {
+      @include foco-primario(-2px);
+    }
+
+    &:active {
+      background-color: $color-overlay-activo;
+    }
+  }
+
+  .carousel-indicators button {
+    @include transicion(transform, $transicion);
+    @include transicion(opacity, $transicion);
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    &:focus {
+      @include foco-primario(2px);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

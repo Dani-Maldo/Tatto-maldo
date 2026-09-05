@@ -1,0 +1,16 @@
+@use "../utilities/variables" as *;
+
+.modal-tatto {
+  background-color: $color-fondo;
+  color: $color-texto;
+  border: 1px solid $color-borde;
+
+  .modal-body {
+    text-align: center;
+
+    img {
+      max-height: 70vh;
+      object-fit: contain;
+    }
+  }
+}

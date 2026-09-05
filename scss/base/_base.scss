@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+main {
+  padding: 25px 15px;
+}
+
+section {
+  background: $color-superficie;
+  padding: $espaciado-base;
+  margin-bottom: 25px;
+  border-radius: $radio-lg;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: $radio-lg;
+  @include transicion(transform);
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}

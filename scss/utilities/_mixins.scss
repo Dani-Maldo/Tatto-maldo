@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+@mixin transicion($propiedades: all, $duracion: $transicion) {
+  transition: $propiedades $duracion;
+}
+
+@mixin foco-primario($offset: 2px) {
+  outline: 2px solid $color-primario;
+  outline-offset: $offset;
+}
+
+@mixin tarjeta-base {
+  border-radius: $radio-lg;
+  overflow: hidden;
+}

@@ -1,0 +1,74 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.navbar-tatto {
+  background-color: $color-header;
+  padding: 15px 20px;
+
+  .navbar-brand {
+    color: $color-texto;
+    font-weight: 700;
+    @include transicion(color, $transicion);
+    @include transicion(transform, $transicion);
+
+    &:hover,
+    &:focus {
+      color: $color-primario;
+      transform: scale(1.03);
+    }
+
+    &:active {
+      color: $color-primario-oscuro;
+      transform: scale(0.98);
+    }
+  }
+
+  .nav-link {
+    color: $color-texto;
+    font-weight: 600;
+    border-radius: $radio-sm;
+    padding: 8px 12px;
+    @include transicion(color, $transicion);
+    @include transicion(background-color, $transicion);
+    @include transicion(transform, $transicion);
+
+    &:hover {
+      color: $color-primario;
+      background-color: $color-superficie;
+    }
+
+    &:focus {
+      color: $color-primario;
+      background-color: $color-superficie;
+      @include foco-primario;
+    }
+
+    &:active {
+      color: $color-texto;
+      background-color: $color-primario;
+      transform: scale(0.96);
+    }
+
+    &.active {
+      color: $color-primario;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $color-primario;
+    @include transicion(transform, $transicion);
+    @include transicion(background-color, $transicion);
+
+    &:hover {
+      background-color: $color-borde;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $color-primario;
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+}

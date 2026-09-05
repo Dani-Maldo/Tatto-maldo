@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-tatto {
+  background-color: $color-texto;
+  color: $color-fondo;
+  border: 1px solid $color-texto;
+  font-weight: 600;
+  @include transicion(background-color, $transicion);
+  @include transicion(color, $transicion);
+  @include transicion(transform, $transicion-rapida);
+  @include transicion(border-color, $transicion);
+
+  &:hover {
+    background-color: $color-fondo;
+    color: $color-texto;
+    border-color: $color-texto;
+  }
+
+  &:focus {
+    background-color: $color-fondo;
+    color: $color-texto;
+    border-color: $color-primario;
+    box-shadow: 0 0 0 0.2rem $color-focus;
+  }
+
+  &:active {
+    background-color: $color-primario !important;
+    color: $color-fondo !important;
+    border-color: $color-primario !important;
+    transform: scale(0.96);
+  }
+}

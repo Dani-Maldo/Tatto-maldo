@@ -1,0 +1,80 @@
+@use "../utilities/variables" as *;
+
+.presentacion {
+  display: grid;
+  grid-template-areas:
+    "imagen"
+    "texto";
+  gap: 25px;
+  margin: 0 0 25px;
+
+  figure { grid-area: imagen; }
+  article { grid-area: texto; }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.estilos-tatuajes {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-base;
+}
+
+.estilo {
+  padding: $espaciado-base;
+  border: 1px solid $color-borde-suave;
+  border-radius: $radio-md;
+}
+
+.introduccion-disenos {
+  display: grid;
+  grid-template-areas:
+    "imagen"
+    "texto";
+  gap: 25px;
+  align-items: center;
+
+  figure { grid-area: imagen; }
+  .texto-disenos { grid-area: texto; }
+}
+
+.galeria-disenos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $espaciado-base;
+}
+
+.diseno {
+  background: $color-header;
+  padding: 15px;
+  border-radius: $radio-lg;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.contacto-grid {
+  width: 100%;
+}
+
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-base;
+
+  .btn-tatto {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacto-info .btn-tatto {
+    width: 100%;
+  }
+}

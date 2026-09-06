@@ -5,15 +5,18 @@
   background-color: $color-fondo;
   color: $color-texto;
   border: 1px solid $color-borde;
+
   @include tarjeta-base;
-  @include transicion(transform, $transicion);
-  @include transicion(border-color, $transicion);
-  @include transicion(box-shadow, $transicion);
+  @include transicion(
+    transform border-color box-shadow,
+    $transicion,
+    ease-in-out
+  );
 
   &:hover {
-    transform: translateY(-6px);
+    @include elevacion(-6px);
+
     border-color: $color-primario;
-    box-shadow: 0 8px 20px $color-sombra;
 
     .card-img-top {
       transform: scale(1.03);
@@ -33,6 +36,7 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
+
     @include transicion(transform, $transicion);
   }
 

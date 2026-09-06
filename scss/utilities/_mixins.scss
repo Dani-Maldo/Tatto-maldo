@@ -1,15 +1,24 @@
 @use "variables" as *;
 
-@mixin transicion($propiedades: all, $duracion: $transicion) {
-  transition: $propiedades $duracion;
+// Mixin para aplicar transiciones a una o varias propiedades
+@mixin transicion($propiedades: all, $duracion: $transicion, $funcion: ease) {
+  transition: $propiedades $duracion $funcion;
 }
 
+// Mixin para efectos de foco accesibles
 @mixin foco-primario($offset: 2px) {
   outline: 2px solid $color-primario;
   outline-offset: $offset;
 }
 
-@mixin tarjeta-base {
-  border-radius: $radio-lg;
-  overflow: hidden;
+// Mixin base para tarjetas
+@mixin tarjeta-base($radio: $radio-lg, $overflow: hidden) {
+  border-radius: $radio;
+  overflow: $overflow;
+}
+
+// Mixin para efectos de elevación
+@mixin elevacion($distancia: -6px, $sombra: 0 8px 20px $color-sombra) {
+  transform: translateY($distancia);
+  box-shadow: $sombra;
 }

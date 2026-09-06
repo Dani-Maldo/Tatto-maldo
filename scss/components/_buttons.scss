@@ -1,20 +1,32 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
+.btn-base {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: $radio-md;
+}
+
 .btn-tatto {
+  @extend .btn-base;
+  
   background-color: $color-texto;
   color: $color-fondo;
   border: 1px solid $color-texto;
   font-weight: 600;
-  @include transicion(background-color, $transicion);
-  @include transicion(color, $transicion);
-  @include transicion(transform, $transicion-rapida);
-  @include transicion(border-color, $transicion);
+
+  @include transicion(
+    background-color color border-color transform,
+    $transicion,
+    ease-in-out
+  );
 
   &:hover {
     background-color: $color-fondo;
     color: $color-texto;
     border-color: $color-texto;
+    transform: translateY(-2px);
   }
 
   &:focus {
@@ -22,6 +34,7 @@
     color: $color-texto;
     border-color: $color-primario;
     box-shadow: 0 0 0 0.2rem $color-focus;
+    @include foco-primario(2px);
   }
 
   &:active {

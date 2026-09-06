@@ -1,0 +1,33 @@
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulso-suave {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animacion-aparecer {
+  animation: aparecer 0.8s ease-out both;
+}
+
+.animacion-pulso {
+  animation: pulso-suave 2s ease-in-out infinite;
+}

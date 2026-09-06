@@ -8,8 +8,13 @@
   gap: 25px;
   margin: 0 0 25px;
 
-  figure { grid-area: imagen; }
-  article { grid-area: texto; }
+  figure {
+    grid-area: imagen;
+  }
+
+  article {
+    grid-area: texto;
+  }
 
   img {
     display: block;
@@ -37,8 +42,13 @@
   gap: 25px;
   align-items: center;
 
-  figure { grid-area: imagen; }
-  .texto-disenos { grid-area: texto; }
+  figure {
+    grid-area: imagen;
+  }
+
+  .texto-disenos {
+    grid-area: texto;
+  }
 }
 
 .galeria-disenos {
@@ -74,7 +84,52 @@
 }
 
 @media (max-width: 767px) {
-  .contacto-info .btn-tatto {
-    width: 100%;
+  .contacto-info {
+    .btn-tatto {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 40px;
+  }
+
+  .galeria-disenos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: $ancho-maximo;
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  section {
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .presentacion,
+  .introduccion-disenos {
+    grid-template-areas: "imagen texto";
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .galeria-disenos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
   }
 }

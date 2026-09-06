@@ -49,3 +49,18 @@
     }
   }
 }
+@media (min-width: 768px) {
+  #carouselTatto {
+    .carousel-item img {
+      height: 480px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #carouselTatto {
+    .carousel-item img {
+      height: 520px;
+    }
+  }
+}

@@ -124,6 +124,16 @@ header {
   transform: scale(0.94);
 }
 
+@media (min-width: 768px) {
+  .navbar-tatto {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-tatto {
+    padding: 20px 50px;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -159,6 +169,13 @@ header {
   transform: scale(0.95);
 }
 
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .btn-tatto {
   background-color: #F5F5F5;
   color: #1A1A1A;
@@ -268,6 +285,16 @@ header {
   transform: scale(0.9);
 }
 
+@media (min-width: 768px) {
+  #carouselTatto .carousel-item img {
+    height: 480px;
+  }
+}
+@media (min-width: 1024px) {
+  #carouselTatto .carousel-item img {
+    height: 520px;
+  }
+}
 .modal-tatto {
   background-color: #1A1A1A;
   color: #F5F5F5;
@@ -359,28 +386,14 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .navbar-tatto {
-    padding: 15px 30px;
-  }
   main {
     padding: 40px;
   }
   .galeria-disenos {
     grid-template-columns: repeat(2, 1fr);
   }
-  .footer {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #carouselTatto .carousel-item img {
-    height: 480px;
-  }
 }
 @media (min-width: 1024px) {
-  .navbar-tatto {
-    padding: 20px 50px;
-  }
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -405,9 +418,6 @@ header {
   .galeria-disenos {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-  }
-  #carouselTatto .carousel-item img {
-    height: 520px;
   }
 }
 

@@ -72,3 +72,14 @@
     }
   }
 }
+@media (min-width: 768px) {
+  .navbar-tatto {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-tatto {
+    padding: 20px 50px;
+  }
+}

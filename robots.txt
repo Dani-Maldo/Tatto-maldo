@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dani-maldo.github.io/Tatto-maldo/sitemap.xml
